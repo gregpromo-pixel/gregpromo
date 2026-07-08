@@ -1,0 +1,83 @@
+{
+  "matches": [
+    {
+      "home": "Barcelona",
+      "score": "2\u20131",
+      "away": "Real Madrid",
+      "status": "Curated sample"
+    },
+    {
+      "home": "Atletico Madrid",
+      "score": "1\u20131",
+      "away": "Sevilla",
+      "status": "Curated sample"
+    },
+    {
+      "home": "Greg Promo All-Stars",
+      "score": "Culture",
+      "away": "Miami Crowd",
+      "status": "Event board"
+    },
+    {
+      "home": "Artists",
+      "score": "vs",
+      "away": "Influencers",
+      "status": "Recap available"
+    }
+  ],
+  "standings": [
+    {
+      "pos": 1,
+      "team": "Barcelona",
+      "pts": 88,
+      "gd": 63
+    },
+    {
+      "pos": 2,
+      "team": "Real Madrid",
+      "pts": 84,
+      "gd": 58
+    },
+    {
+      "pos": 3,
+      "team": "Atletico Madrid",
+      "pts": 76,
+      "gd": 34
+    },
+    {
+      "pos": 4,
+      "team": "Athletic Club",
+      "pts": 70,
+      "gd": 24
+    },
+    {
+      "pos": 5,
+      "team": "Villarreal",
+      "pts": 65,
+      "gd": 20
+    },
+    {
+      "pos": 6,
+      "team": "Real Betis",
+      "pts": 60,
+      "gd": 9
+    }
+  ],
+  "scorers": [
+    {
+      "name": "Robert Lewandowski",
+      "team": "Barcelona",
+      "goals": 27
+    },
+    {
+      "name": "Kylian Mbappe",
+      "team": "Real Madrid",
+      "goals": 31
+    },
+    {
+      "name": "Antoine Gregory",
+      "team": "Greg Promo Media",
+      "goals": 1
+    }
+  ]
+}
