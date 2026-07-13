@@ -38,7 +38,7 @@ window.GP_SITE = {
   videos: {
     hero: "assets/videos/hero-recap.mp4",
     birthday: "assets/videos/greg-birthday-film.mp4",
-    eventRecap: "assets/videos/artistes-vs-influenceurs-recap.mp4",
+    eventRecap: "assets/videos/artists-vs-influencers-recap.mp4",
     crowd: "assets/videos/crowd-energy.mp4",
     behind: "assets/videos/behind-the-scenes.mp4",
     performance: "assets/videos/performance.mp4",
