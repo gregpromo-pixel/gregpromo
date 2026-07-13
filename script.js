@@ -72,13 +72,61 @@ emailForms.forEach(form=>form.addEventListener('submit',async e=>{
 }));
 
 function setupLocalVideos(){
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
   document.querySelectorAll('video[data-video-key]').forEach(video=>{
     const key = video.dataset.videoKey;
     const src = CONFIG.videos?.[key];
-    const fallback = video.closest('.video-card, .hero, .video-panel')?.querySelector('[data-video-fallback]');
-    if(src){ video.querySelector('source')?.setAttribute('src', src); video.load(); }
-    video.addEventListener('error', ()=>{ video.style.display='none'; if(fallback) fallback.style.display='block'; });
+    const stage = video.closest('.video-stage') || video.parentElement;
+    const fallback = stage?.querySelector('[data-video-fallback]');
+    const skeleton = stage?.querySelector('.video-skeleton');
+    const source = video.querySelector('source');
+
+    const showFallback = ()=>{
+      video.pause();
+      video.style.display='none';
+      skeleton?.classList.add('is-hidden');
+      if(fallback) fallback.style.display='grid';
+      stage?.classList.add('has-error');
+    };
+
+    const markReady = ()=>{
+      skeleton?.classList.add('is-hidden');
+      stage?.classList.add('is-ready');
+    };
+
+    if(!src || !source){
+      showFallback();
+      return;
+    }
+
+    source.src = src;
+    video.load();
+    video.addEventListener('loadedmetadata', markReady, {once:true});
+    video.addEventListener('canplay', markReady, {once:true});
+    video.addEventListener('error', showFallback);
+    source.addEventListener('error', showFallback);
+
+    if(canHover){
+      const card = video.closest('.premium-video-card');
+      card?.addEventListener('mouseenter', async ()=>{
+        if(video.error || video.readyState < 2) return;
+        video.muted = true;
+        try{ await video.play(); }catch(_err){}
+      });
+      card?.addEventListener('mouseleave', ()=>{
+        video.pause();
+        video.currentTime = 0;
+      });
+    }
   });
+
+  document.addEventListener('play', event=>{
+    if(event.target.tagName !== 'VIDEO') return;
+    document.querySelectorAll('video').forEach(other=>{
+      if(other !== event.target) other.pause();
+    });
+  }, true);
 }
 setupLocalVideos();
 
