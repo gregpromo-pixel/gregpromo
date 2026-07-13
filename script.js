@@ -35,6 +35,7 @@ function translateAttributes(){
   });
 }
 function applyI18n(){
+  document.querySelectorAll('[data-fr][data-en]').forEach(el=>{ const value=el.getAttribute(`data-${rootEl.dataset.lang}`); if(value!=null) el.textContent=value; });
   document.querySelectorAll('[data-i18n]').forEach(el=>{ el.textContent = tr(el.dataset.i18n); });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{ el.placeholder = tr(el.dataset.i18nPlaceholder); });
   document.querySelectorAll('[data-lang-btn]').forEach(btn=>btn.classList.toggle('is-active', btn.dataset.langBtn === rootEl.dataset.lang));
@@ -164,3 +165,5 @@ function renderDemoFixtures(rows){document.querySelectorAll('[data-fixtures]').f
 function renderDemoStandings(rows){document.querySelectorAll('[data-standings]').forEach(el=>el.innerHTML=`<table class="live-table"><thead><tr><th>#</th><th>${rootEl.dataset.lang==='fr'?'Équipe':'Team'}</th><th>Pts</th><th>GD</th></tr></thead><tbody>${(rows||[]).map(r=>`<tr><td>${r.pos}</td><td><strong>${r.team}</strong></td><td><strong>${r.pts}</strong></td><td>${r.gd}</td></tr>`).join('')}</tbody></table>`);}
 function renderDemoScorers(rows){document.querySelectorAll('[data-scorers]').forEach(el=>el.innerHTML=(rows.length?rows:[{name:'Featured Player',team:'Greg Promo All-Star',goals:0}]).map((r,i)=>`<article class="scorer-row"><span>${i+1}</span><div><strong>${r.name}</strong><br><em>${r.team}</em></div><b>${r.goals} ${rootEl.dataset.lang==='fr'?'buts':'goals'}</b></article>`).join(''));}
 setupLeagueButtons();setupSeason();loadSportsBoard();
+// Pause other videos when a new one starts.
+document.querySelectorAll('video').forEach(video=>{video.setAttribute('playsinline','');video.addEventListener('play',()=>{document.querySelectorAll('video').forEach(other=>{if(other!==video&&!other.paused)other.pause();});});});
