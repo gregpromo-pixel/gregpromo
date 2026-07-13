@@ -36,10 +36,10 @@ window.GP_SITE = {
   },
 
   videos: {
-    hero: "assets/videos/hero-recap.mp4",
-    birthday: "assets/videos/greg-birthday-film.mp4",
+    hero: "assets/videos/heros-recap-2.mp4",
+    birthday: "assets/videos/greg-birthday-film-2.mp4",
     eventRecap: "assets/videos/artists-vs-influencers-recap.mp4",
-    crowd: "assets/videos/crowd-energy.mp4",
+    crowd: "assets/videos/crowd-energys.mp4.mp4",
     behind: "assets/videos/behind-the-scenes.mp4",
     performance: "assets/videos/performance.mp4",
     walkout: "assets/videos/player-walkout.mp4",
