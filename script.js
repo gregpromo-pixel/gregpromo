@@ -73,14 +73,42 @@ emailForms.forEach(form=>form.addEventListener('submit',async e=>{
 
 function setupLocalVideos(){
   const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const videoAliases = {
+    hero: [
+      CONFIG.videos?.hero,
+      'assets/videos/hero-recap.mp4',
+      'assets/videos/heros-recap-2.mp4',
+      'assets/videos/hero-recap-2.mp4'
+    ],
+    crowd: [
+      CONFIG.videos?.crowd,
+      'assets/videos/crowd-energy.mp4',
+      'assets/videos/crowd-energys.mp4.mp4',
+      'assets/videos/crowd-energys.mp4'
+    ],
+    eventRecap: [
+      CONFIG.videos?.eventRecap,
+      'assets/videos/artists-vs-influencers-recap.mp4',
+      'assets/videos/artistes-vs-influenceurs-recap.mp4'
+    ],
+    birthday: [
+      CONFIG.videos?.birthday,
+      'assets/videos/greg-birthday-film.mp4',
+      'assets/videos/greg-birthday-film-2.mp4'
+    ],
+    fans: [CONFIG.videos?.fans, 'assets/videos/fan-reactions.mp4'],
+    performance: [CONFIG.videos?.performance, 'assets/videos/performance.mp4']
+  };
 
   document.querySelectorAll('video[data-video-key]').forEach(video=>{
     const key = video.dataset.videoKey;
-    const src = CONFIG.videos?.[key];
+    const candidates = [...new Set((videoAliases[key] || [CONFIG.videos?.[key]]).filter(Boolean))];
     const stage = video.closest('.video-stage') || video.parentElement;
     const fallback = stage?.querySelector('[data-video-fallback]');
     const skeleton = stage?.querySelector('.video-skeleton');
     const source = video.querySelector('source');
+    let candidateIndex = 0;
+    let resolved = false;
 
     const showFallback = ()=>{
       video.pause();
@@ -91,21 +119,36 @@ function setupLocalVideos(){
     };
 
     const markReady = ()=>{
+      resolved = true;
+      video.style.display='block';
+      if(fallback) fallback.style.display='none';
       skeleton?.classList.add('is-hidden');
+      stage?.classList.remove('has-error');
       stage?.classList.add('is-ready');
     };
 
-    if(!src || !source){
+    const tryNextSource = ()=>{
+      if(resolved || !source) return;
+      if(candidateIndex >= candidates.length){
+        showFallback();
+        return;
+      }
+      source.src = candidates[candidateIndex++];
+      video.load();
+    };
+
+    if(!source || candidates.length === 0){
       showFallback();
       return;
     }
 
-    source.src = src;
-    video.load();
     video.addEventListener('loadedmetadata', markReady, {once:true});
     video.addEventListener('canplay', markReady, {once:true});
-    video.addEventListener('error', showFallback);
-    source.addEventListener('error', showFallback);
+    source.addEventListener('error', tryNextSource);
+    video.addEventListener('error', ()=>{
+      if(!resolved) tryNextSource();
+    });
+    tryNextSource();
 
     if(canHover){
       const card = video.closest('.premium-video-card');
@@ -120,6 +163,7 @@ function setupLocalVideos(){
       });
     }
   });
+
 
   document.addEventListener('play', event=>{
     if(event.target.tagName !== 'VIDEO') return;
