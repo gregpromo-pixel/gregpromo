@@ -1,3 +1,142 @@
-<!doctype html><html lang="fr" data-lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Galerie — Greg Promo Media</title><meta name="description" content="Galerie publique et photos d'activités Greg Promo Media."><link rel="icon" href="assets/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><div class="color-rule"></div><div class="shell nav"><a class="brand" href="index.html"><img src="assets/gregpromo-logo-dark.png" alt="Greg Promo logo"><span>Media</span></a><nav class="nav-links"><a href="index.html" data-i18n="navHome">Accueil</a><a href="articles.html" data-i18n="navArticles">Articles</a><a href="events.html" data-i18n="navEvents">Événements</a><a href="videos.html" data-i18n="navVideos">Vidéos</a><a href="sports.html" data-i18n="navSports">Sports</a><a class="active" href="gallery.html" data-i18n="navGallery">Galerie</a><a href="advertise.html" data-i18n="navAdvertise">Promotion</a></nav><div class="nav-actions"><a class="pill-link dark" data-main-ig target="_blank">@gregpromo</a><a class="pill-link" data-event-ig target="_blank">@gregpromo_event</a><div class="ios-lang" aria-label="Language"><button class="lang-btn is-active" data-lang-btn="fr"><span>🇫🇷</span> FR</button><button class="lang-btn" data-lang-btn="en"><span>🇺🇸</span> EN</button></div><button class="menu-btn" data-menu-btn data-i18n="menuLabel">Menu</button></div></div><div class="mobile-panel" data-menu><a href="index.html" data-i18n="navHome">Accueil</a><a href="articles.html" data-i18n="navArticles">Articles</a><a href="events.html" data-i18n="navEvents">Événements</a><a href="videos.html" data-i18n="navVideos">Vidéos</a><a href="sports.html" data-i18n="navSports">Sports</a><a href="gallery.html" data-i18n="navGallery">Galerie</a><a href="advertise.html" data-i18n="navAdvertise">Promotion</a><a href="contact.html" data-i18n="navContact">Contact</a></div></header><div class="ticker"><div class="ticker-row"><span>Haitian All-Star Game</span><span>Miami</span><span>Greg Promo Event</span><span>Articles</span><span>Videos</span><span>Sports Desk</span><span>Culture</span><span>Music</span><span>Community</span><span>Haitian All-Star Game</span><span>Miami</span><span>Greg Promo Event</span></div></div><main><section class="sub-hero gallery-hero"><div class="shell page-grid"><div><p class="eyebrow" data-i18n="galleryTitle">Galerie publique</p><h1>Photos officielles. Moments partagés.</h1><p data-i18n="galleryText">Photos officielles et moments partagés autour des activités Greg Promo.</p></div><div class="portrait-card"><img src="assets/antoine-gregory-profile.jpg" alt="Antoine Gregory dit Greg Promo"><div><strong>Antoine Gregory</strong><span>dit Greg Promo</span></div></div></div></section>
-<section class="section upload-section"><div class="shell upload-grid"><div><p class="eyebrow" data-i18n="uploadTitle">Ajouter une photo d’activité</p><h2>Partagez un moment réel.</h2><p class="lead" data-i18n="uploadText">Partagez un moment de l’événement. Les photos peuvent être validées avant d’apparaître dans la galerie publique.</p><p class="note">Les meilleures photos validées rejoignent la galerie publique.</p></div><form class="contact-card upload-card" data-photo-upload-form><div class="form-grid"><input name="name" type="text" data-i18n-placeholder="uploadName" placeholder="Votre nom" required><input name="city" type="text" data-i18n-placeholder="uploadCity" placeholder="Ville"><input class="full" name="activity_name" type="text" data-i18n-placeholder="uploadActivity" placeholder="Nom de l’activité" required><textarea name="caption" data-i18n-placeholder="uploadCaption" placeholder="Légende"></textarea><label class="file-input full"><span data-i18n="uploadFile">Photo</span><input name="photo" type="file" accept="image/png,image/jpeg,image/webp" required></label></div><button class="btn red ios-btn" type="submit" data-i18n="uploadSubmit">Envoyer la photo</button><p class="note" data-photo-note></p></form></div></section>
-<section class="section"><div class="shell section-head"><div><p class="eyebrow">Gallery Feed</p><h2>Activity Wall</h2></div><p>Official visuals and approved community photos appear here.</p></div><div class="shell dynamic-gallery" data-community-gallery><p class="note">Loading gallery...</p></div></section></main><footer class="site-footer"><div class="shell footer-grid"><div><img src="assets/gregpromo-logo-light.png" alt="Greg Promo logo"><p>Greg Promo Media — culture, sports, events and diaspora energy.</p></div><div><h4>Pages</h4><a href="articles.html">Articles</a><a href="videos.html">Videos</a><a href="sports.html">Sports</a><a href="gallery.html">Gallery</a></div><div><h4>Business</h4><a href="advertise.html">Book promotion</a><a href="press.html">Press kit</a><a href="contact.html">Contact</a></div><div><h4>Social</h4><a data-main-ig target="_blank">@gregpromo</a><a data-event-ig target="_blank">@gregpromo_event</a></div></div><div class="shell footer-bottom">© <span data-year></span> Greg Promo Media. Built for real culture moments.</div></footer><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="site-data.js"></script><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Galerie — Greg Promo Media</title>
+<meta name="description" content="Photos officielles et moments approuvés de la communauté autour des activités Greg Promo.">
+<meta name="theme-color" content="#07080b">
+<link rel="canonical" href="https://gregpromoht.com/gallery.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Greg Promo Media">
+<meta property="og:title" content="Galerie — Greg Promo Media">
+<meta property="og:description" content="Photos officielles et moments approuvés de la communauté autour des activités Greg Promo.">
+<meta property="og:image" content="https://gregpromoht.com/assets/fans-flags-track.jpg">
+<meta property="og:url" content="https://gregpromoht.com/gallery.html">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Galerie — Greg Promo Media">
+<meta name="twitter:description" content="Photos officielles et moments approuvés de la communauté autour des activités Greg Promo.">
+<meta name="twitter:image" content="https://gregpromoht.com/assets/fans-flags-track.jpg">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="gallery-page">
+<header class="site-header">
+  <div class="shell nav">
+    <a class="brand" href="index.html" aria-label="Greg Promo Media">
+      <img src="assets/gregpromo-logo-dark.png" alt="Greg Promo" width="88" height="40">
+      <span>Media</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html" data-i18n="navHome">Accueil</a>
+      <a href="about.html" data-fr="Profil" data-en="Profile">Profil</a>
+      <a href="events.html" data-i18n="navEvents">Événements</a>
+      <a href="videos.html" data-i18n="navVideos">Vidéos</a>
+      <a href="sports.html" data-i18n="navSports">Sports</a>
+      <a class="active" href="gallery.html" data-i18n="navGallery">Galerie</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="social-icon-link is-dark" data-main-ig target="_blank" rel="noopener noreferrer"></a>
+      <div class="ios-lang" aria-label="Language / Langue">
+        <button class="lang-btn is-active" data-lang-btn="fr" type="button" aria-label="Français" aria-pressed="true">FR</button>
+        <button class="lang-btn" data-lang-btn="en" type="button" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn nav-cta" href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+      <button class="menu-btn" data-menu-btn type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+        data-fr-attr="Ouvrir le menu" data-en-attr="Open menu" data-attr-name="aria-label">
+        <span class="sr-only" data-fr="Menu" data-en="Menu">Menu</span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-panel" data-menu>
+      <a href="index.html" data-i18n="navHome">Accueil</a>
+      <a href="about.html" data-fr="Profil" data-en="Profile">Profil</a>
+      <a href="events.html" data-i18n="navEvents">Événements</a>
+      <a href="videos.html" data-i18n="navVideos">Vidéos</a>
+      <a href="sports.html" data-i18n="navSports">Sports</a>
+      <a class="active" href="gallery.html" data-i18n="navGallery">Galerie</a>
+      <a href="advertise.html" data-i18n="navAdvertise">Promotion</a>
+      <a href="contact.html" data-i18n="navContact">Contact</a>
+  </div>
+</header>
+
+<main>
+  <section class="gallery-hero-premium">
+    <div class="wide gallery-hero-grid">
+      <div data-reveal><p class="eyebrow eyebrow-light" data-fr="Galerie" data-en="Gallery">Galerie</p><h1 data-fr="Les images gardent l’énergie." data-en="Images keep the energy.">Les images gardent l’énergie.</h1><p data-fr="Visuels officiels, terrain, artistes, équipes et moments partagés par la communauté après validation." data-en="Official visuals, field moments, artists, teams and community submissions after approval.">Visuels officiels, terrain, artistes, équipes et moments partagés par la communauté après validation.</p></div>
+      <div class="gallery-hero-stack" data-reveal data-reveal-delay="1"><img src="assets/fans-flags-track.jpg" alt="Supporters avec drapeaux haïtiens"><img src="assets/women-player-close.jpg" alt="Portrait d’une joueuse"><img src="assets/night-crew.jpg" alt="Équipe Greg Promo après un événement"></div>
+    </div>
+  </section>
+
+  <section class="gallery-feed-section">
+    <div class="wide section-head"><div data-reveal><p class="eyebrow" data-fr="Moments" data-en="Moments">Moments</p><h2 data-fr="Officiel & communauté." data-en="Official & community.">Officiel & communauté.</h2></div><p data-reveal data-reveal-delay="1" data-fr="Les photos approuvées depuis Supabase apparaissent avant la sélection officielle locale." data-en="Approved photos from Supabase appear before the official local selection.">Les photos approuvées depuis Supabase apparaissent avant la sélection officielle locale.</p></div>
+    <div class="wide premium-gallery" data-community-gallery aria-live="polite"><p class="note" data-fr="Chargement de la galerie…" data-en="Loading gallery…">Chargement de la galerie…</p></div>
+  </section>
+
+  <section class="section muted">
+    <div class="wide gallery-upload-grid">
+      <div class="gallery-upload-copy" data-reveal><p class="eyebrow" data-fr="Partage public" data-en="Public submission">Partage public</p><h2 data-fr="Ajoutez votre regard." data-en="Add your perspective.">Ajoutez votre regard.</h2><p data-fr="Envoyez une photo liée à une activité Greg Promo. Elle pourra apparaître dans la galerie après validation." data-en="Submit a photo connected to a Greg Promo activity. It may appear in the gallery after approval.">Envoyez une photo liée à une activité Greg Promo. Elle pourra apparaître dans la galerie après validation.</p></div>
+      <form class="gallery-upload-card" data-photo-upload-form data-reveal data-reveal-delay="1">
+        <div class="field-grid"><label><span data-fr="Votre nom" data-en="Your name">Votre nom</span><input name="name" type="text" maxlength="120" autocomplete="name" required></label><label><span data-fr="Activité" data-en="Activity">Activité</span><input name="activity_name" type="text" maxlength="160" required></label></div>
+        <label><span data-fr="Légende" data-en="Caption">Légende</span><textarea name="caption" rows="4" maxlength="300" data-fr-attr="Décrivez le moment" data-en-attr="Describe the moment" data-attr-name="placeholder" placeholder="Décrivez le moment"></textarea></label>
+        <label class="file-field"><span data-fr="Photo · JPG, PNG ou WebP · 8 Mo max" data-en="Photo · JPG, PNG or WebP · 8MB max">Photo · JPG, PNG ou WebP · 8 Mo max</span><input name="photo" type="file" accept="image/jpeg,image/png,image/webp" required></label>
+        <div class="upload-actions"><button class="btn dark" type="submit" data-i18n="uploadSubmit">Envoyer la photo</button><p class="note" data-photo-note aria-live="polite"></p></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wide footer-shell">
+    <div class="footer-cta" data-reveal>
+      <div>
+        <p class="eyebrow eyebrow-light" data-fr="Collaboration" data-en="Collaboration">Collaboration</p>
+        <h2 data-fr="Construisons quelque chose que les gens retiendront." data-en="Let’s build something people will remember.">Construisons quelque chose que les gens retiendront.</h2>
+        <p data-fr="Promotion, couverture événementielle, partenariat, sponsoring ou campagne éditoriale." data-en="Promotion, event coverage, partnerships, sponsorships or editorial campaigns.">Promotion, couverture événementielle, partenariat, sponsoring ou campagne éditoriale.</p>
+      </div>
+      <a class="btn light" href="contact.html" data-fr="Parler du projet" data-en="Discuss the project">Parler du projet</a>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="assets/gregpromo-logo-light.png" alt="Greg Promo" width="104" height="48">
+        <p data-fr="Greg Promo Media relie culture, influence, sport et événements entre Haïti, Miami et la diaspora." data-en="Greg Promo Media connects culture, influence, sports and events across Haiti, Miami and the diaspora.">Greg Promo Media relie culture, influence, sport et événements entre Haïti, Miami et la diaspora.</p>
+        <div class="social-icon-group footer-social-icons">
+          <a class="social-icon-link" data-main-ig target="_blank" rel="noopener noreferrer"></a>
+          <a class="social-icon-link" data-event-ig target="_blank" rel="noopener noreferrer"></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3 data-fr="Explorer" data-en="Explore">Explorer</h3>
+        <a href="about.html" data-fr="Profil" data-en="Profile">Profil</a>
+        <a href="articles.html" data-i18n="navArticles">Articles</a>
+        <a href="events.html" data-i18n="navEvents">Événements</a>
+        <a href="videos.html" data-i18n="navVideos">Vidéos</a>
+        <a href="sports.html" data-i18n="navSports">Sports</a>
+        <a href="gallery.html" data-i18n="navGallery">Galerie</a>
+      </div>
+      <div class="footer-links">
+        <h3 data-fr="Contact" data-en="Contact">Contact</h3>
+        <a href="advertise.html" data-fr="Services & promotion" data-en="Services & promotion">Services & promotion</a>
+        <a href="contact.html" data-fr="Réserver une collaboration" data-en="Book a collaboration">Réserver une collaboration</a>
+        <a data-contact-email href="mailto:contact@gregpromoht.com">contact@gregpromoht.com</a>
+        <a data-contact-phone href="tel:+19549311514">+1 (954) 931-1514</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Greg Promo Media.</span>
+      <span data-fr="Culture réelle. Présentation premium." data-en="Real culture. Premium presentation.">Culture réelle. Présentation premium.</span>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="site-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
