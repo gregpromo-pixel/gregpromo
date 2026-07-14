@@ -1,250 +1,37 @@
 <!doctype html>
 <html lang="fr" data-lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Contact — Greg Promo Media</title>
-  <meta name="description" content="Contactez Greg Promo Media pour une promotion, une couverture médiatique, un partenariat, un sponsoring ou une réservation.">
-  <link rel="icon" href="assets/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-
-  <style>
-    .contact-page {
-      background: #f7f7f4;
-    }
-
-    .contact-hero {
-      padding: 72px 0 58px;
-      background: #fff;
-      border-bottom: 1px solid var(--line, #e7e4dd);
-    }
-
-    .contact-hero h1 {
-      max-width: 920px;
-      font-size: clamp(54px, 7.8vw, 112px);
-    }
-
-    .contact-hero .contact-lead {
-      max-width: 760px;
-      margin: 22px 0 0;
-      color: var(--muted, #7a7a74);
-      font-size: 18px;
-      line-height: 1.65;
-    }
-
-    .contact-layout {
-      display: grid;
-      grid-template-columns: minmax(260px, .72fr) minmax(0, 1.28fr);
-      gap: 28px;
-      align-items: start;
-    }
-
-    .contact-information,
-    .zoho-form-card {
-      background: #fff;
-      border: 1px solid var(--line, #e7e4dd);
-      border-radius: 30px;
-      box-shadow: 0 24px 70px rgba(13, 13, 13, .08);
-    }
-
-    .contact-information {
-      position: sticky;
-      top: 112px;
-      padding: 30px;
-    }
-
-    .contact-information h2 {
-      margin-bottom: 18px;
-      font-size: clamp(40px, 4vw, 58px);
-    }
-
-    .contact-information > p {
-      margin: 0 0 26px;
-      color: var(--muted, #7a7a74);
-    }
-
-    .contact-methods {
-      display: grid;
-      gap: 12px;
-    }
-
-    .contact-method {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      min-height: 66px;
-      padding: 14px 16px;
-      border: 1px solid var(--line, #e7e4dd);
-      border-radius: 18px;
-      background: #fbfaf7;
-      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
-    }
-
-    .contact-method:hover {
-      transform: translateY(-2px);
-      border-color: #cfc8bc;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, .06);
-    }
-
-    .contact-method-icon {
-      width: 42px;
-      height: 42px;
-      flex: 0 0 42px;
-      display: grid;
-      place-items: center;
-      border-radius: 13px;
-      background: #0b0b0b;
-      color: #fff;
-    }
-
-    .contact-method-icon svg {
-      width: 20px;
-      height: 20px;
-      fill: currentColor;
-    }
-
-    .contact-method small,
-    .contact-method strong {
-      display: block;
-    }
-
-    .contact-method small {
-      margin-bottom: 2px;
-      color: var(--muted, #7a7a74);
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-    }
-
-    .contact-method strong {
-      overflow-wrap: anywhere;
-      font-size: 14px;
-    }
-
-    .zoho-form-card {
-      min-width: 0;
-      overflow: hidden;
-      padding: 18px;
-    }
-
-    .zoho-form-heading {
-      padding: 12px 12px 24px;
-    }
-
-    .zoho-form-heading h2 {
-      margin-bottom: 12px;
-      font-size: clamp(42px, 5vw, 70px);
-    }
-
-    .zoho-form-heading p {
-      max-width: 720px;
-      margin: 0;
-      color: var(--muted, #7a7a74);
-    }
-
-    .zoho-frame-wrap {
-      width: 100%;
-      overflow: hidden;
-      border: 1px solid var(--line, #e7e4dd);
-      border-radius: 22px;
-      background: #fff;
-    }
-
-    .zoho-frame-wrap iframe {
-      display: block;
-      width: 100%;
-      min-height: 3387px;
-      border: 0;
-      background: #fff;
-    }
-
-    .social-icon-link {
-      display: inline-grid !important;
-      width: 44px;
-      height: 44px;
-      margin: 4px 8px 4px 0 !important;
-      place-items: center;
-      border: 1px solid #292929;
-      border-radius: 14px;
-      background: #141414;
-      color: #fff !important;
-      transition: transform .2s ease, background .2s ease;
-    }
-
-    .social-icon-link:hover {
-      transform: translateY(-2px);
-      background: #262626;
-    }
-
-    .social-icon-link svg {
-      width: 21px;
-      height: 21px;
-      fill: currentColor;
-    }
-
-    .footer-contact-link {
-      color: #aaa !important;
-      overflow-wrap: anywhere;
-    }
-
-    @media (max-width: 900px) {
-      .contact-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-information {
-        position: static;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .contact-hero {
-        padding: 44px 0 48px;
-      }
-
-      .contact-hero h1 {
-        font-size: clamp(42px, 14vw, 62px);
-      }
-
-      .contact-hero .contact-lead {
-        font-size: 16px;
-      }
-
-      .contact-information,
-      .zoho-form-card {
-        padding: 18px;
-        border-radius: 22px;
-      }
-
-      .zoho-form-card {
-        padding: 6px;
-      }
-
-      .zoho-form-heading {
-        padding: 16px 12px 22px;
-      }
-
-      .zoho-frame-wrap {
-        border-radius: 16px;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — Greg Promo Media</title>
+<meta name="description" content="Contactez Greg Promo Media pour une promotion, une couverture médiatique, un partenariat, un sponsoring ou une réservation.">
+<meta name="theme-color" content="#f7f7f4">
+<link rel="canonical" href="https://gregpromoht.com/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Greg Promo Media">
+<meta property="og:title" content="Contact — Greg Promo Media">
+<meta property="og:description" content="Promotion, réservation, partenariat, sponsoring ou couverture d’événement.">
+<meta property="og:image" content="https://gregpromoht.com/assets/event-crowd.jpg">
+<meta property="og:url" content="https://gregpromoht.com/contact.html">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Greg Promo Media">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="contact-page">
   <header class="site-header">
     <div class="color-rule"></div>
-
     <div class="shell nav">
       <a class="brand" href="index.html">
-        <img src="assets/gregpromo-logo-dark.png" alt="Greg Promo logo">
+        <img src="assets/gregpromo-logo-dark.png" alt="Greg Promo" width="88" height="40">
         <span>Media</span>
       </a>
-
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="index.html" data-i18n="navHome">Accueil</a>
         <a href="articles.html" data-i18n="navArticles">Articles</a>
@@ -254,49 +41,17 @@
         <a href="gallery.html" data-i18n="navGallery">Galerie</a>
         <a href="advertise.html" data-i18n="navAdvertise">Promotion</a>
       </nav>
-
       <div class="nav-actions">
-        <a
-          class="social-icon-link"
-          data-main-ig
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Greg Promo Instagram"
-          title="@gregpromo"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
-          </svg>
-        </a>
-
-        <a
-          class="social-icon-link"
-          data-event-ig
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Greg Promo Event Instagram"
-          title="@gregpromo_event"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
-          </svg>
-        </a>
-
+        <a class="social-icon-link is-dark" data-main-ig target="_blank" rel="noopener noreferrer"></a>
+        <a class="social-icon-link" data-event-ig target="_blank" rel="noopener noreferrer"></a>
         <div class="ios-lang" aria-label="Language">
           <button class="lang-btn is-active" data-lang-btn="fr" type="button"><span>🇫🇷</span> FR</button>
           <button class="lang-btn" data-lang-btn="en" type="button"><span>🇺🇸</span> EN</button>
         </div>
-
-        <button
-          class="menu-btn"
-          data-menu-btn
-          type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
-        ></button>
+        <button class="menu-btn" data-menu-btn type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+          data-fr-attr="Ouvrir le menu" data-en-attr="Open menu" data-attr-name="aria-label"></button>
       </div>
     </div>
-
     <div class="mobile-panel" data-menu>
       <a href="index.html" data-i18n="navHome">Accueil</a>
       <a href="articles.html" data-i18n="navArticles">Articles</a>
@@ -310,55 +65,27 @@
   </header>
 
   <div class="ticker" aria-hidden="true">
-    <div class="ticker-row">
-      <span>Haitian All-Star Game</span>
-      <span>Miami</span>
-      <span>Greg Promo Event</span>
-      <span>Culture</span>
-      <span>Music</span>
-      <span>Community</span>
-      <span>Haitian All-Star Game</span>
-      <span>Miami</span>
-      <span>Greg Promo Event</span>
-      <span>Culture</span>
-      <span>Music</span>
-      <span>Community</span>
-    </div>
+    <div class="ticker-row"><span>Haitian All-Star Game</span><span>Miami</span><span>Greg Promo Event</span><span>Culture</span><span>Music</span><span>Community</span><span>Haitian All-Star Game</span><span>Miami</span><span>Greg Promo Event</span><span>Culture</span><span>Music</span><span>Community</span></div>
   </div>
 
   <main>
     <section class="contact-hero">
       <div class="shell">
-        <p class="eyebrow" data-fr="Contact professionnel" data-en="Professional contact">
-          Contact professionnel
-        </p>
-        <h1 data-fr="Parlons de votre prochain projet." data-en="Let’s discuss your next project.">
-          Parlons de votre prochain projet.
-        </h1>
-        <p
-          class="contact-lead"
-          data-fr="Promotion, réservation, partenariat, sponsoring, couverture d’événement ou demande de services média. Remplissez le formulaire et notre équipe vous contactera par courriel."
-          data-en="Promotion, booking, partnership, sponsorship, event coverage or media service requests. Complete the form and our team will contact you by email."
-        >
-          Promotion, réservation, partenariat, sponsoring, couverture d’événement ou demande de services média. Remplissez le formulaire et notre équipe vous contactera par courriel.
-        </p>
+        <p class="eyebrow" data-fr="Contact professionnel" data-en="Professional contact">Contact professionnel</p>
+        <h1 data-fr="Parlons de votre prochain projet." data-en="Let’s discuss your next project.">Parlons de votre prochain projet.</h1>
+        <p class="contact-lead" data-fr="Promotion, réservation, partenariat, sponsoring, couverture d’événement ou demande de services média. Remplissez le formulaire et notre équipe vous contactera par courriel." data-en="Promotion, booking, partnership, sponsorship, event coverage or media service requests. Complete the form and our team will contact you by email.">Promotion, réservation, partenariat, sponsoring, couverture d’événement ou demande de services média. Remplissez le formulaire et notre équipe vous contactera par courriel.</p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="contact-section">
       <div class="shell contact-layout">
-        <aside class="contact-information">
+        <aside class="contact-info-card">
           <p class="eyebrow" data-fr="Coordonnées" data-en="Contact information">Coordonnées</p>
-          <h2 data-fr="Greg Promo Media" data-en="Greg Promo Media">Greg Promo Media</h2>
-          <p
-            data-fr="Pour une réponse plus rapide, utilisez le formulaire de réservation ou contactez-nous directement."
-            data-en="For a faster response, use the booking form or contact us directly."
-          >
-            Pour une réponse plus rapide, utilisez le formulaire de réservation ou contactez-nous directement.
-          </p>
+          <h2>Greg Promo Media</h2>
+          <p class="contact-intro" data-fr="Pour une réponse plus rapide, utilisez le formulaire de réservation ou contactez-nous directement." data-en="For a faster response, use the booking form or contact us directly.">Pour une réponse plus rapide, utilisez le formulaire de réservation ou contactez-nous directement.</p>
 
           <div class="contact-methods">
-            <a class="contact-method" href="mailto:contact@gregpromoht.com">
+            <a class="contact-method" data-contact-email href="mailto:contact@gregpromoht.com">
               <span class="contact-method-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm9 7.1L20.2 7H3.8L12 12.1ZM3 17h18V9.3l-8.5 5.3a1 1 0 0 1-1 0L3 9.3V17Z"/></svg>
               </span>
@@ -368,7 +95,7 @@
               </span>
             </a>
 
-            <a class="contact-method" href="tel:+19549311514">
+            <a class="contact-method" data-contact-phone href="tel:+19549311514">
               <span class="contact-method-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M6.6 2h3.1l1.4 5.1-2.2 1.7a16 16 0 0 0 6.3 6.3l1.7-2.2 5.1 1.4v3.1c0 2.5-2 4.6-4.6 4.6C8.9 22 2 15.1 2 6.6 2 4 4 2 6.6 2Z"/></svg>
               </span>
@@ -392,21 +119,14 @@
 
         <div class="zoho-form-card" id="booking-form">
           <div class="zoho-form-heading">
-            <p class="eyebrow" data-fr="Réservation et services média" data-en="Booking and media services">
-              Réservation et services média
-            </p>
-            <h2 data-fr="Envoyez votre demande." data-en="Send your request.">
-              Envoyez votre demande.
-            </h2>
-            <p
-              data-fr="Aucun prix n’est affiché. Le devis dépend du service, du projet, du lieu, de la date et des livrables demandés."
-              data-en="No prices are displayed. Your quote depends on the service, project, location, date and requested deliverables."
-            >
-              Aucun prix n’est affiché. Le devis dépend du service, du projet, du lieu, de la date et des livrables demandés.
-            </p>
+            <p class="eyebrow" data-fr="Réservation et services média" data-en="Booking and media services">Réservation et services média</p>
+            <h2 data-fr="Envoyez votre demande." data-en="Send your request.">Envoyez votre demande.</h2>
+            <p data-fr="Aucun prix n’est affiché. Le devis dépend du service, du projet, du lieu, de la date et des livrables demandés." data-en="No prices are displayed. Your quote depends on the service, project, location, date and requested deliverables.">Aucun prix n’est affiché. Le devis dépend du service, du projet, du lieu, de la date et des livrables demandés.</p>
           </div>
 
           <div class="zoho-frame-wrap">
+            <!-- allow="camera; microphone; geolocation" kept from the original embed in case the
+                 Zoho form itself uses photo capture / location fields; drop any it doesn't use. -->
             <iframe
               id="gregpromo-zoho-form"
               src="https://forms.zohopublic.com/contactgregp1/form/GregPromoBookingMediaRequestRservationDemandedeSer/formperma/GJAYPYMUyOcuvOjLVqnFuzYkz0YfJVtf6kcVHjVAaIY?zf_rszfm=1"
@@ -425,58 +145,51 @@
   <footer class="site-footer">
     <div class="shell footer-grid">
       <div>
-        <img src="assets/gregpromo-logo-light.png" alt="Greg Promo logo">
-        <p
-          data-fr="Greg Promo Media — culture, sport, événements et énergie de la diaspora."
-          data-en="Greg Promo Media — culture, sports, events and diaspora energy."
-        >
-          Greg Promo Media — culture, sport, événements et énergie de la diaspora.
-        </p>
+        <img src="assets/gregpromo-logo-light.png" alt="Greg Promo" width="100" height="46">
+        <p data-fr="Greg Promo Media — culture, sport, événements et énergie de la diaspora." data-en="Greg Promo Media — culture, sports, events and diaspora energy.">Greg Promo Media — culture, sport, événements et énergie de la diaspora.</p>
       </div>
-
       <div>
         <h4>Pages</h4>
-        <a href="articles.html">Articles</a>
-        <a href="videos.html" data-fr="Vidéos" data-en="Videos">Vidéos</a>
-        <a href="sports.html">Sports</a>
-        <a href="gallery.html" data-fr="Galerie" data-en="Gallery">Galerie</a>
+        <a href="articles.html" data-i18n="navArticles">Articles</a>
+        <a href="videos.html" data-i18n="navVideos">Vidéos</a>
+        <a href="sports.html" data-i18n="navSports">Sports</a>
+        <a href="gallery.html" data-i18n="navGallery">Galerie</a>
       </div>
-
       <div>
-        <h4 data-fr="Professionnel" data-en="Business">Professionnel</h4>
-        <a href="advertise.html" data-fr="Réserver une promotion" data-en="Book promotion">Réserver une promotion</a>
-        <a href="press.html" data-fr="Dossier de presse" data-en="Press kit">Dossier de presse</a>
-        <a href="contact.html">Contact</a>
-        <a class="footer-contact-link" href="mailto:contact@gregpromoht.com">contact@gregpromoht.com</a>
-        <a class="footer-contact-link" href="tel:+19549311514">+1 (954) 931-1514</a>
+        <h4>Business</h4>
+        <a href="advertise.html" data-fr="Réserver une promo" data-en="Book promotion">Réserver une promo</a>
+        <a href="press.html" data-fr="Kit média" data-en="Press kit">Kit média</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <a data-contact-email href="mailto:contact@gregpromoht.com">contact@gregpromoht.com</a>
+        <a data-contact-phone href="tel:+19549311514">+1 (954) 931-1514</a>
       </div>
-
       <div>
         <h4 data-fr="Réseaux" data-en="Social">Réseaux</h4>
-        <a class="social-icon-link" data-main-ig target="_blank" rel="noopener noreferrer" aria-label="Greg Promo Instagram" title="@gregpromo">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
-        </a>
-        <a class="social-icon-link" data-event-ig target="_blank" rel="noopener noreferrer" aria-label="Greg Promo Event Instagram" title="@gregpromo_event">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
-        </a>
+        <div class="social-icon-group footer-social-icons">
+          <a class="social-icon-link is-dark" data-main-ig target="_blank" rel="noopener noreferrer"></a>
+          <a class="social-icon-link footer-light-icon" data-event-ig target="_blank" rel="noopener noreferrer"></a>
+        </div>
       </div>
     </div>
-
-    <div class="shell footer-bottom">
-      © <span data-year></span> Greg Promo Media.
-      <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous droits réservés.</span>
-    </div>
+    <div class="shell footer-bottom">© <span data-year></span> Greg Promo Media. <span data-fr="Conçu pour les vrais moments culturels." data-en="Built for real culture moments.">Conçu pour les vrais moments culturels.</span></div>
   </footer>
 
   <script src="site-data.js"></script>
   <script src="script.js"></script>
 
   <script>
+    // Resize the Zoho iframe to fit its content, and scroll to it once the form
+    // signals a submit. Origin is checked against forms.zohopublic.com so a
+    // message from anywhere else on the page (or a malicious embed) is ignored —
+    // the original listener trusted any postMessage that merely matched the
+    // form-key substring, which any other frame on the page could spoof.
     (function () {
+      var ZOHO_ORIGIN = 'https://forms.zohopublic.com';
       var iframe = document.getElementById('gregpromo-zoho-form');
       if (!iframe) return;
 
       window.addEventListener('message', function (event) {
+        if (event.origin !== ZOHO_ORIGIN) return;
         if (typeof event.data !== 'string') return;
 
         var parts = event.data.split('|');
@@ -484,17 +197,13 @@
 
         var formKey = parts[0];
         var receivedHeight = parseInt(parts[1], 10);
-
         if (!Number.isFinite(receivedHeight)) return;
         if (iframe.src.indexOf(formKey) === -1) return;
 
         iframe.style.height = Math.max(receivedHeight + 20, 900) + 'px';
 
         if (parts.length === 3) {
-          document.getElementById('booking-form')?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+          document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, false);
     })();
