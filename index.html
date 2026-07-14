@@ -1,35 +1,322 @@
-<!doctype html><html lang="fr" data-lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Greg Promo Media — Culture, Sports & Events</title><meta name="description" content="Greg Promo Media, Haitian culture, sports events, videos and promotion."><link rel="icon" href="assets/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><div class="color-rule"></div><div class="shell nav"><a class="brand" href="index.html"><img src="assets/gregpromo-logo-dark.png" alt="Greg Promo logo"><span>Media</span></a><nav class="nav-links"><a class="active" href="index.html" data-i18n="navHome">Accueil</a><a class="" href="articles.html" data-i18n="navArticles">Articles</a><a class="" href="events.html" data-i18n="navEvents">Événements</a><a class="" href="videos.html" data-i18n="navVideos">Vidéos</a><a class="" href="sports.html" data-i18n="navSports">Sports</a><a class="" href="gallery.html" data-i18n="navGallery">Galerie</a><a class="" href="advertise.html" data-i18n="navAdvertise">Promotion</a></nav><div class="nav-actions"><a class="pill-link dark" data-main-ig target="_blank">@gregpromo</a><a class="pill-link" data-event-ig target="_blank">@gregpromo_event</a><div class="ios-lang" aria-label="Language"><button class="lang-btn is-active" data-lang-btn="fr"><span>🇫🇷</span> FR</button><button class="lang-btn" data-lang-btn="en"><span>🇺🇸</span> EN</button></div><button class="menu-btn" data-menu-btn data-i18n="menuLabel">Menu</button></div></div><div class="mobile-panel" data-menu><a href="index.html" data-i18n="navHome">Accueil</a><a href="articles.html" data-i18n="navArticles">Articles</a><a href="events.html" data-i18n="navEvents">Événements</a><a href="videos.html" data-i18n="navVideos">Vidéos</a><a href="sports.html" data-i18n="navSports">Sports</a><a href="gallery.html" data-i18n="navGallery">Galerie</a><a href="advertise.html" data-i18n="navAdvertise">Promotion</a><a href="contact.html" data-i18n="navContact">Contact</a></div></header><div class="ticker"><div class="ticker-row"><span>Haitian All-Star Game</span><span>Miami</span><span>Greg Promo Event</span><span>Articles</span><span>Videos</span><span>Sports Desk</span><span>Culture</span><span>Music</span><span>Community</span><span>Haitian All-Star Game</span><span>Miami</span><span>Greg Promo Event</span></div></div>
+<!doctype html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greg Promo Media — Culture, Sports & Events</title>
+<meta name="description" content="Greg Promo documente la culture haïtienne à Miami : le terrain, la foule, les artistes, la musique et les histoires de la communauté.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="canonical" href="https://gregpromoht.com/">
+<!-- NOTE: replace gregpromoht.com above/below with the live production domain before deploying -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Greg Promo Media">
+<meta property="og:title" content="Greg Promo Media — Culture, Sports & Events">
+<meta property="og:description" content="Greg Promo documente la culture haïtienne à Miami : le terrain, la foule, les artistes, la musique et les histoires de la communauté.">
+<meta property="og:image" content="https://gregpromoht.com/assets/event-crowd.jpg">
+<meta property="og:url" content="https://gregpromoht.com/">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Greg Promo Media — Culture, Sports & Events">
+<meta name="twitter:description" content="Greg Promo documente la culture haïtienne à Miami.">
+<meta name="twitter:image" content="https://gregpromoht.com/assets/event-crowd.jpg">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="color-rule"></div>
+  <div class="shell nav">
+    <a class="brand" href="index.html">
+      <img src="assets/gregpromo-logo-dark.png" alt="Greg Promo" width="88" height="40">
+      <span>Media</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a class="active" href="index.html" data-i18n="navHome">Accueil</a>
+      <a href="articles.html" data-i18n="navArticles">Articles</a>
+      <a href="events.html" data-i18n="navEvents">Événements</a>
+      <a href="videos.html" data-i18n="navVideos">Vidéos</a>
+      <a href="sports.html" data-i18n="navSports">Sports</a>
+      <a href="gallery.html" data-i18n="navGallery">Galerie</a>
+      <a href="advertise.html" data-i18n="navAdvertise">Promotion</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="social-icon-link is-dark" data-main-ig target="_blank" rel="noopener noreferrer"></a>
+      <a class="social-icon-link" data-event-ig target="_blank" rel="noopener noreferrer"></a>
+      <div class="ios-lang" aria-label="Language">
+        <button class="lang-btn is-active" data-lang-btn="fr" type="button"><span>🇫🇷</span> FR</button>
+        <button class="lang-btn" data-lang-btn="en" type="button"><span>🇺🇸</span> EN</button>
+      </div>
+      <button class="menu-btn" data-menu-btn type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+        data-fr-attr="Ouvrir le menu" data-en-attr="Open menu" data-attr-name="aria-label"></button>
+    </div>
+  </div>
+  <div class="mobile-panel" data-menu>
+    <a href="index.html" data-i18n="navHome">Accueil</a>
+    <a href="articles.html" data-i18n="navArticles">Articles</a>
+    <a href="events.html" data-i18n="navEvents">Événements</a>
+    <a href="videos.html" data-i18n="navVideos">Vidéos</a>
+    <a href="sports.html" data-i18n="navSports">Sports</a>
+    <a href="gallery.html" data-i18n="navGallery">Galerie</a>
+    <a href="advertise.html" data-i18n="navAdvertise">Promotion</a>
+    <a href="contact.html" data-i18n="navContact">Contact</a>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-row">
+    <span>Haitian All-Star Game</span><span>Miami</span><span>Greg Promo Event</span><span>Culture</span><span>Music</span><span>Community</span><span>Haitian All-Star Game</span><span>Miami</span><span>Greg Promo Event</span><span>Culture</span><span>Music</span><span>Community</span>
+  </div>
+</div>
+
 <main>
   <section class="hero">
     <div class="wide hero-grid">
       <div>
-        <p class="eyebrow" data-i18n="heroKicker">Greg Promo Media · Haïti · Miami · Culture</p>
-        <h1 data-i18n="heroTitle">Une plateforme construite autour des moments réels.</h1>
-        <p class="lead" data-i18n="heroText">Greg Promo documente la foule, les artistes, le terrain, les vidéos, les annonces et les histoires qui donnent du mouvement à la communauté haïtienne et caribéenne.</p>
-        <div class="hero-actions"><a class="btn red" href="all-star-game.html" data-i18n="ctaRecap">Voir le recap</a><a class="btn blue" href="videos.html" data-i18n="ctaVideo">Voir les vidéos</a><a class="btn ghost" href="advertise.html" data-i18n="ctaPromo">Réserver une promo</a></div>
-        <div class="metric-row"><div class="metric"><b>541K</b><span>Instagram reach</span></div><div class="metric"><b>37K+</b><span>Posts published</span></div><div class="metric"><b>2</b><span>All-Star editions</span></div><div class="metric"><b>1</b><span>Culture board</span></div></div>
+        <p class="eyebrow" data-fr="Greg Promo Media · Haïti · Miami · Culture" data-en="Greg Promo Media · Haiti · Miami · Culture">Greg Promo Media · Haïti · Miami · Culture</p>
+        <h1 data-fr="Une plateforme construite autour des moments réels." data-en="A platform built around real moments.">Une plateforme construite autour des moments réels.</h1>
+        <p class="lead" data-fr="Greg Promo documente la foule, les artistes, le terrain, les vidéos, les annonces et les histoires qui donnent du mouvement à la communauté haïtienne et caribéenne." data-en="Greg Promo documents the crowd, artists, field moments, videos, announcements and stories that move the Haitian and Caribbean community.">Greg Promo documente la foule, les artistes, le terrain, les vidéos, les annonces et les histoires qui donnent du mouvement à la communauté haïtienne et caribéenne.</p>
+        <div class="hero-actions">
+          <a class="btn red" href="all-star-game.html" data-fr="Voir le recap" data-en="View recap">Voir le recap</a>
+          <a class="btn blue" href="videos.html" data-fr="Voir les vidéos" data-en="Watch videos">Voir les vidéos</a>
+          <a class="btn ghost" href="advertise.html" data-fr="Réserver une promo" data-en="Book promotion">Réserver une promo</a>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><b>541K</b><span data-fr="Portée Instagram" data-en="Instagram reach">Portée Instagram</span></div>
+          <div class="metric"><b>37K+</b><span data-fr="Posts publiés" data-en="Posts published">Posts publiés</span></div>
+          <div class="metric"><b>2</b><span data-fr="Éditions All-Star" data-en="All-Star editions">Éditions All-Star</span></div>
+          <div class="metric"><b>1</b><span data-fr="Tableau culture" data-en="Culture board">Tableau culture</span></div>
+        </div>
       </div>
-      <div class="hero-media"><div class="media-frame"><video autoplay muted loop playsinline poster="assets/event-crowd.jpg"><source src="assets/videos/heros-recap-2.mp4" type="video/mp4"></video><img src="assets/event-crowd.jpg" alt="Haitian All-Star Game crowd"></div><div class="floating-card"><strong>Latest recap</strong><p>North Miami Stadium became a Haitian culture scene: football, DJs, creators, fans and flags.</p></div></div>
+      <div class="hero-media">
+        <div class="media-frame">
+          <img src="assets/event-crowd.jpg" alt="Foule au Haitian All-Star Game">
+          <video data-video-key="hero" autoplay muted loop playsinline poster="assets/event-crowd.jpg" aria-hidden="true">
+            <source src="assets/videos/heros-recap-2.mp4" type="video/mp4">
+          </video>
+          <div class="floating-card">
+            <strong data-fr="Dernier recap" data-en="Latest recap">Dernier recap</strong>
+            <p data-fr="Le North Miami Stadium est devenu une scène culturelle haïtienne : football, DJs, créateurs, fans et drapeaux." data-en="North Miami Stadium became a Haitian culture scene: football, DJs, creators, fans and flags.">Le North Miami Stadium est devenu une scène culturelle haïtienne : football, DJs, créateurs, fans et drapeaux.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
   <section class="section">
-    <div class="shell section-head"><div><p class="eyebrow">Our model</p><h2 data-i18n="modelTitle">Une présence. Plusieurs fonctions.</h2></div><p data-i18n="modelText">Greg Promo n’est pas seulement une page de blog. C’est une vitrine culturelle, un média d’événements, un espace sport et un canal de visibilité.</p></div>
-    <div class="wide model-grid"><article class="model-card"><div class="num">01</div><h3>Media Platform</h3><p>Daily visibility, alerts, reposts, coverage and audience conversation around Haitian culture.</p></article><article class="model-card"><div class="num">02</div><h3>Event Engine</h3><p>Real events with crowd energy, sponsors, DJs, artists, content capture and post-event momentum.</p></article><article class="model-card"><div class="num">03</div><h3>Sports Culture</h3><p>The All-Star Game, match recaps, local players, fans and league tables in one clean sports desk.</p></article><article class="model-card"><div class="num">04</div><h3>Video Room</h3><p>Birthday films, recaps, walkouts, crowd clips and behind-the-scenes content from local MP4 assets.</p></article><article class="model-card"><div class="num">05</div><h3>Promotion</h3><p>Artist rollouts, event campaigns, business spotlights and sponsor visibility with clear packages.</p></article></div>
+    <div class="shell section-head">
+      <div>
+        <p class="eyebrow" data-fr="Notre modèle" data-en="Our model">Notre modèle</p>
+        <h2 data-fr="Une présence. Plusieurs fonctions." data-en="One presence. Several functions.">Une présence. Plusieurs fonctions.</h2>
+      </div>
+      <p data-fr="Greg Promo n’est pas seulement une page de blog. C’est une vitrine culturelle, un média d’événements, un espace sport et un canal de visibilité." data-en="Greg Promo is not only a blog page. It is a culture showcase, event media platform, sports space and visibility channel.">Greg Promo n’est pas seulement une page de blog. C’est une vitrine culturelle, un média d’événements, un espace sport et un canal de visibilité.</p>
+    </div>
+    <div class="wide model-grid">
+      <article class="model-card">
+        <div class="num">01</div>
+        <h3 data-fr="Plateforme média" data-en="Media Platform">Plateforme média</h3>
+        <p data-fr="Visibilité quotidienne, alertes, reposts, couvertures et échanges autour de la culture haïtienne." data-en="Daily visibility, alerts, reposts, coverage and audience conversation around Haitian culture.">Visibilité quotidienne, alertes, reposts, couvertures et échanges autour de la culture haïtienne.</p>
+      </article>
+      <article class="model-card">
+        <div class="num">02</div>
+        <h3 data-fr="Moteur événementiel" data-en="Event Engine">Moteur événementiel</h3>
+        <p data-fr="Des événements réels avec public, sponsors, DJs, artistes, contenus et visibilité après l’événement." data-en="Real events with crowd energy, sponsors, DJs, artists, content capture and post-event momentum.">Des événements réels avec public, sponsors, DJs, artistes, contenus et visibilité après l’événement.</p>
+      </article>
+      <article class="model-card">
+        <div class="num">03</div>
+        <h3 data-fr="Culture sportive" data-en="Sports Culture">Culture sportive</h3>
+        <p data-fr="All-Star Game, recaps, joueurs locaux, fans et classements dans un bureau sport clair." data-en="The All-Star Game, match recaps, local players, fans and league tables in one clean sports desk.">All-Star Game, recaps, joueurs locaux, fans et classements dans un bureau sport clair.</p>
+      </article>
+      <article class="model-card">
+        <div class="num">04</div>
+        <h3 data-fr="Salle vidéo" data-en="Video Room">Salle vidéo</h3>
+        <p data-fr="Films d’anniversaire, recaps, entrées, public et coulisses à partir de vidéos locales." data-en="Birthday films, recaps, walkouts, crowd clips and behind-the-scenes content from local video assets.">Films d’anniversaire, recaps, entrées, public et coulisses à partir de vidéos locales.</p>
+      </article>
+      <article class="model-card">
+        <div class="num">05</div>
+        <h3 data-fr="Promotion" data-en="Promotion">Promotion</h3>
+        <p data-fr="Lancements artistes, campagnes événementielles, visibilité business et sponsors avec des offres claires." data-en="Artist rollouts, event campaigns, business spotlights and sponsor visibility with clear packages.">Lancements artistes, campagnes événementielles, visibilité business et sponsors avec des offres claires.</p>
+      </article>
+    </div>
   </section>
+
   <section class="section muted">
-    <div class="shell section-head"><div><p class="eyebrow">Proof of work</p><h2 data-i18n="proofTitle">Le travail se montre.</h2></div><p>Pas besoin de trop expliquer. Les photos, les vidéos, les articles et les gens présents racontent l’impact.</p></div>
-    <div class="shell work-grid"><article class="work-card"><img src="assets/women-team-sunset.jpg" alt="Women team"><div class="work-body"><span class="tag">All-Star Game</span><h3>Women’s team energy</h3><p>The game expands the stage: men, women, fans, creators and sponsors all become part of the culture.</p></div></article><article class="work-card"><img src="assets/fans-flags-track.jpg" alt="Fans with flags"><div class="work-body"><span class="tag">Community</span><h3>Flags in the crowd</h3><p>Haitian pride showed up in the stands, on the track, and across social media after the event.</p></div></article><article class="work-card"><img src="assets/night-crew.jpg" alt="Night crew"><div class="work-body"><span class="tag">After dark</span><h3>Night crew moments</h3><p>When the match ends, the culture continues through music, video, friendships and content drops.</p></div></article></div>
+    <div class="shell section-head">
+      <div>
+        <p class="eyebrow" data-fr="Preuves du terrain" data-en="Proof of work">Preuves du terrain</p>
+        <h2 data-fr="Le travail se montre." data-en="The work speaks for itself.">Le travail se montre.</h2>
+      </div>
+      <p data-fr="Pas besoin de trop expliquer. Les photos, les vidéos, les articles et les gens présents racontent l’impact." data-en="No need to over-explain. The photos, videos, articles and people present show the impact.">Pas besoin de trop expliquer. Les photos, les vidéos, les articles et les gens présents racontent l’impact.</p>
+    </div>
+    <div class="shell work-grid">
+      <article class="work-card">
+        <img src="assets/women-team-sunset.jpg" alt="Équipe féminine au coucher du soleil" loading="lazy">
+        <div class="work-body">
+          <span class="tag">All-Star Game</span>
+          <h3 data-fr="Énergie de l’équipe féminine" data-en="Women’s team energy">Énergie de l’équipe féminine</h3>
+          <p data-fr="Le match élargit la scène : hommes, femmes, fans, créateurs et sponsors font partie de la culture." data-en="The game expands the stage: men, women, fans, creators and sponsors all become part of the culture.">Le match élargit la scène : hommes, femmes, fans, créateurs et sponsors font partie de la culture.</p>
+        </div>
+      </article>
+      <article class="work-card">
+        <img src="assets/fans-flags-track.jpg" alt="Fans avec drapeaux haïtiens" loading="lazy">
+        <div class="work-body">
+          <span class="tag" data-fr="Communauté" data-en="Community">Communauté</span>
+          <h3 data-fr="Drapeaux dans la foule" data-en="Flags in the crowd">Drapeaux dans la foule</h3>
+          <p data-fr="La fierté haïtienne s’est vue dans les gradins, sur la piste et sur les réseaux après l’événement." data-en="Haitian pride showed up in the stands, on the track, and across social media after the event.">La fierté haïtienne s’est vue dans les gradins, sur la piste et sur les réseaux après l’événement.</p>
+        </div>
+      </article>
+      <article class="work-card">
+        <img src="assets/night-crew.jpg" alt="Équipe créative après l’événement" loading="lazy">
+        <div class="work-body">
+          <span class="tag" data-fr="Après la nuit" data-en="After dark">Après la nuit</span>
+          <h3 data-fr="Moments de nuit" data-en="Night crew moments">Moments de nuit</h3>
+          <p data-fr="Quand le match se termine, la culture continue avec la musique, les vidéos, les rencontres et les contenus." data-en="When the match ends, the culture continues through music, video, friendships and content drops.">Quand le match se termine, la culture continue avec la musique, les vidéos, les rencontres et les contenus.</p>
+        </div>
+      </article>
+    </div>
   </section>
+
   <section class="section dark">
-    <div class="shell section-head"><div><p class="eyebrow">Articles</p><h2 data-i18n="latestTitle">Dernières histoires</h2></div><a class="btn ghost" href="articles.html">All articles →</a></div>
-    <div class="shell article-grid"><article class="article-card featured"><div><span class="tag">Feature</span></div><div><h3>Artistes vs Influenceurs revient avec une ambition plus grande.</h3><p>Après une première édition saluée, Greg Promo ramène le terrain, la musique et la communauté au centre.</p><a class="read-link" href="articles.html#article-event">Lire →</a></div></article><article class="article-card"><div><span class="tag">Profile</span><h3>Antoine Gregory, la vision derrière Greg Promo.</h3></div><a class="read-link" href="articles.html#article-profile">Lire →</a></article><article class="article-card"><div><span class="tag">Career</span><h3>Un influenceur qui construit sa différence.</h3></div><a class="read-link" href="articles.html#article-difference">Lire →</a></article></div>
+    <div class="shell section-head">
+      <div>
+        <p class="eyebrow" data-i18n="navArticles">Articles</p>
+        <h2 data-fr="Dernières histoires" data-en="Latest stories">Dernières histoires</h2>
+      </div>
+      <a class="btn ghost" href="articles.html" data-fr="Tous les articles →" data-en="All articles →">Tous les articles →</a>
+    </div>
+    <div class="shell article-grid">
+      <article class="article-card featured">
+        <div><span class="tag" data-fr="À la une" data-en="Feature">À la une</span></div>
+        <div>
+          <h3 data-fr="Artistes vs Influenceurs revient avec une ambition plus grande." data-en="Artists vs Influencers returns with bigger ambition.">Artistes vs Influenceurs revient avec une ambition plus grande.</h3>
+          <p data-fr="Après une première édition saluée, Greg Promo ramène le terrain, la musique et la communauté au centre." data-en="After a praised first edition, Greg Promo brings the field, music and community back to the center.">Après une première édition saluée, Greg Promo ramène le terrain, la musique et la communauté au centre.</p>
+          <a class="read-link" href="articles.html#article-event" data-fr="Lire →" data-en="Read →">Lire →</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div>
+          <span class="tag" data-fr="Profil" data-en="Profile">Profil</span>
+          <h3 data-fr="Antoine Gregory, la vision derrière Greg Promo." data-en="Antoine Gregory, the vision behind Greg Promo.">Antoine Gregory, la vision derrière Greg Promo.</h3>
+        </div>
+        <a class="read-link" href="articles.html#article-profile" data-fr="Lire →" data-en="Read →">Lire →</a>
+      </article>
+      <article class="article-card">
+        <div>
+          <span class="tag" data-fr="Parcours" data-en="Career">Parcours</span>
+          <h3 data-fr="Un influenceur qui construit sa différence." data-en="An influencer building his difference.">Un influenceur qui construit sa différence.</h3>
+        </div>
+        <a class="read-link" href="articles.html#article-difference" data-fr="Lire →" data-en="Read →">Lire →</a>
+      </article>
+    </div>
   </section>
+
   <section class="section">
-    <div class="shell split"><div><p class="eyebrow">Video room</p><h2>Real clips. Real people. Real energy.</h2><p class="lead">Recaps, coulisses, anniversaires et moments forts peuvent être présentés directement sur le site avec un rendu propre et premium.</p><a class="btn red" href="videos.html">Voir les vidéos</a></div><div class="video-card"><video controls poster="assets/jersey-moment.jpg"><source src="assets/videos/greg-birthday-film-2.mp4" type="video/mp4"></video><div class="video-copy"><h3>Birthday Film</h3><p>A personal piece that can sit beside the event recaps and show Greg Promo as a real brand personality.</p></div></div></div>
+    <div class="shell split">
+      <div>
+        <p class="eyebrow" data-fr="Salle vidéo" data-en="Video room">Salle vidéo</p>
+        <h2 data-fr="De vraies vidéos. De vraies personnes. Une vraie énergie." data-en="Real clips. Real people. Real energy.">De vraies vidéos. De vraies personnes. Une vraie énergie.</h2>
+        <p class="lead" data-fr="Recaps, coulisses, anniversaires et moments forts, présentés directement sur le site avec un rendu propre et premium." data-en="Recaps, behind-the-scenes moments, birthdays and highlights, presented directly on the site with a clean, premium feel.">Recaps, coulisses, anniversaires et moments forts, présentés directement sur le site avec un rendu propre et premium.</p>
+        <a class="btn red" href="videos.html" data-fr="Voir les vidéos" data-en="Watch videos">Voir les vidéos</a>
+      </div>
+      <div class="video-card">
+        <div class="video-stage">
+          <div class="video-skeleton" aria-hidden="true"></div>
+          <video data-video-key="birthday" controls playsinline preload="metadata" poster="assets/jersey-moment.jpg">
+            <source src="assets/videos/greg-birthday-film-2.mp4" type="video/mp4">
+          </video>
+          <div class="video-fallback" data-video-fallback><span data-fr="Vidéo bientôt disponible." data-en="Video coming soon.">Vidéo bientôt disponible.</span></div>
+        </div>
+        <div class="video-copy">
+          <h3 data-fr="Film d’anniversaire" data-en="Birthday Film">Film d’anniversaire</h3>
+          <p data-fr="Un contenu plus personnel qui accompagne les recaps et montre Greg Promo comme une vraie personnalité de marque." data-en="A personal piece that can sit beside the event recaps and show Greg Promo as a real brand personality.">Un contenu plus personnel qui accompagne les recaps et montre Greg Promo comme une vraie personnalité de marque.</p>
+        </div>
+      </div>
+    </div>
   </section>
+
   <section class="section muted">
-    <div class="shell sports-preview"><div><p class="eyebrow">Sports Desk</p><h2 data-i18n="sportsTitle">Sports Desk</h2><p>Follow league tables, match results and Greg Promo’s own All-Star Game recaps in one clean sports desk built for fans and culture moments.</p><a class="btn blue" href="sports.html">Open sports board</a></div><div class="sports-board" data-sports-board><div class="sports-controls-clean"><strong><span data-current-league>La Liga</span> · <span>2024</span></strong><span class="api-status" data-sports-status>Loading board...</span></div><div data-standings><p class="note">Loading standings...</p></div></div></div>
+    <div class="shell sports-preview">
+      <div>
+        <p class="eyebrow" data-fr="Bureau Sports" data-en="Sports Desk">Bureau Sports</p>
+        <h2 data-fr="Bureau Sports" data-en="Sports Desk">Bureau Sports</h2>
+        <p data-fr="Suivez les classements, résultats et recaps All-Star de Greg Promo dans un bureau sport clair, pensé pour les fans et les moments culturels." data-en="Follow league tables, match results and Greg Promo’s own All-Star Game recaps in one clean sports desk built for fans and culture moments.">Suivez les classements, résultats et recaps All-Star de Greg Promo dans un bureau sport clair, pensé pour les fans et les moments culturels.</p>
+        <a class="btn blue" href="sports.html" data-fr="Ouvrir le tableau sport" data-en="Open sports board">Ouvrir le tableau sport</a>
+      </div>
+      <div class="sports-board" data-sports-board>
+        <div class="sports-controls-clean">
+          <strong><span data-current-league>La Liga</span> · <span>2024</span></strong>
+          <span class="api-status" data-sports-status data-fr="Chargement du tableau..." data-en="Loading board...">Chargement du tableau...</span>
+        </div>
+        <div data-standings><p class="note" data-fr="Chargement du classement..." data-en="Loading standings...">Chargement du classement...</p></div>
+      </div>
+    </div>
   </section>
-  <section class="section"><div class="shell split"><div><p class="eyebrow">Work with Greg Promo</p><h2>This is not just a contact form.</h2><p class="lead">It is an entry point for serious promotion requests: artists, events, brands, sponsors and community projects with a real budget and a clear objective.</p></div><div class="contact-card"><form data-email-form><div class="form-grid"><input name="name" placeholder="Name"><input name="email" placeholder="Email"><select name="subject" class="full"><option>Promotion inquiry</option><option>Event coverage</option><option>Sponsor package</option><option>Artist rollout</option></select><textarea name="message" placeholder="Tell us what you want to build"></textarea></div><br><button class="btn red" type="submit">Submit inquiry</button><p class="note" data-note></p></form></div></div></section>
+
+  <section class="section">
+    <div class="shell split">
+      <div>
+        <p class="eyebrow" data-fr="Travailler avec Greg Promo" data-en="Work with Greg Promo">Travailler avec Greg Promo</p>
+        <h2 data-fr="Ce n’est pas seulement un formulaire de contact." data-en="This is not just a contact form.">Ce n’est pas seulement un formulaire de contact.</h2>
+        <p class="lead" data-fr="C’est une porte d’entrée pour les demandes sérieuses : artistes, événements, marques, sponsors et projets communautaires avec objectif clair." data-en="It is an entry point for serious promotion requests: artists, events, brands, sponsors and community projects with a real budget and a clear objective.">C’est une porte d’entrée pour les demandes sérieuses : artistes, événements, marques, sponsors et projets communautaires avec objectif clair.</p>
+      </div>
+      <div class="contact-card">
+        <form data-email-form>
+          <div class="form-grid">
+            <input name="name" data-i18n-placeholder="formNamePlaceholder" placeholder="Nom" autocomplete="name">
+            <input name="email" type="email" data-i18n-placeholder="formEmailPlaceholder" placeholder="Email" autocomplete="email">
+            <select name="subject" class="full">
+              <option data-i18n="formSubjectPromotion">Demande de promotion</option>
+              <option data-i18n="formSubjectEvent">Couverture événementielle</option>
+              <option data-i18n="formSubjectSponsor">Forfait sponsor</option>
+              <option data-i18n="formSubjectArtist">Lancement artiste</option>
+            </select>
+            <textarea name="message" data-i18n-placeholder="formMessagePlaceholder" placeholder="Dites-nous ce que vous voulez construire"></textarea>
+          </div>
+          <br>
+          <button class="btn red" type="submit" data-fr="Envoyer la demande" data-en="Submit inquiry">Envoyer la demande</button>
+          <p class="note" data-note></p>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="site-footer"><div class="shell footer-grid"><div><img src="assets/gregpromo-logo-light.png" alt="Greg Promo logo"><p>Greg Promo Media — culture, sports, events and diaspora energy.</p></div><div><h4>Pages</h4><a href="articles.html">Articles</a><a href="videos.html">Videos</a><a href="sports.html">Sports</a><a href="gallery.html">Gallery</a></div><div><h4>Business</h4><a href="advertise.html">Book promotion</a><a href="press.html">Press kit</a><a href="contact.html">Contact</a></div><div><h4>Social</h4><a data-main-ig target="_blank">@gregpromo</a><a data-event-ig target="_blank">@gregpromo_event</a></div></div><div class="shell footer-bottom">© <span data-year></span> Greg Promo Media. Built for real culture moments.</div></footer><script src="site-data.js"></script><script src="script.js"></script></body></html>
+
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <img src="assets/gregpromo-logo-light.png" alt="Greg Promo" width="100" height="46">
+      <p data-fr="Greg Promo Media — culture, sport, événements et énergie de la diaspora." data-en="Greg Promo Media — culture, sports, events and diaspora energy.">Greg Promo Media — culture, sport, événements et énergie de la diaspora.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <a href="articles.html" data-i18n="navArticles">Articles</a>
+      <a href="videos.html" data-i18n="navVideos">Vidéos</a>
+      <a href="sports.html" data-i18n="navSports">Sports</a>
+      <a href="gallery.html" data-i18n="navGallery">Galerie</a>
+    </div>
+    <div>
+      <h4>Business</h4>
+      <a href="advertise.html" data-fr="Réserver une promo" data-en="Book promotion">Réserver une promo</a>
+      <a href="press.html" data-fr="Kit média" data-en="Press kit">Kit média</a>
+      <a href="contact.html" data-i18n="navContact">Contact</a>
+      <a data-contact-email href="mailto:contact@gregpromoht.com">contact@gregpromoht.com</a>
+      <a data-contact-phone href="tel:+19549311514">+1 (954) 931-1514</a>
+    </div>
+    <div>
+      <h4 data-fr="Réseaux" data-en="Social">Réseaux</h4>
+      <div class="social-icon-group footer-social-icons">
+        <a class="social-icon-link is-dark" data-main-ig target="_blank" rel="noopener noreferrer"></a>
+        <a class="social-icon-link footer-light-icon" data-event-ig target="_blank" rel="noopener noreferrer"></a>
+      </div>
+    </div>
+  </div>
+  <div class="shell footer-bottom">© <span data-year></span> Greg Promo Media. <span data-fr="Conçu pour les vrais moments culturels." data-en="Built for real culture moments.">Conçu pour les vrais moments culturels.</span></div>
+</footer>
+
+<script src="site-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
